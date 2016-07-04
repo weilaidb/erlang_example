@@ -1,7 +1,7 @@
 -module (event_handler).
 -export ([make/1, add_handler/2, event/2]).
-%%åˆ¶ä½œä¸€ä¸ªåä¸ºNameçš„æ–°äº‹ä»¶å¤„ç†å™¨
-%%å¤„ç†å‡½æ•°æ˜¯no_op, ä»£è¡¨ä¸å¯¹äº‹ä»¶åšä»»ä½•å¤„ç†
+%%ÖÆ×÷Ò»¸öÃûÎªNameµÄÐÂÊÂ¼þ´¦ÀíÆ÷
+%%´¦Àíº¯ÊýÊÇno_op, ´ú±í²»¶ÔÊÂ¼þ×öÈÎºÎ´¦Àí
 make(Name) ->
 	register(Name, spawn(fun
 		()  ->
@@ -9,7 +9,7 @@ make(Name) ->
 	end)).
 add_handler(Name, Fun) -> Name ! {add, Fun}.	
 
-%%ç”Ÿæˆä¸€ä¸ªäº‹ä»¶
+%%Éú³ÉÒ»¸öÊÂ¼þ
 event(Name, X)	 -> Name ! {event, X}.
 
 
